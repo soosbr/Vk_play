@@ -1,7 +1,7 @@
 import ctypes
-import json
 import string
 import os
+
 
 def find_directory(name):
     available_drives = ['%s:\\' % d for d in string.ascii_uppercase if os.path.exists('%s:\\' % d)]
@@ -19,7 +19,6 @@ for i in find_directory("underlords.exe").split("\\"):
         break
     else:
         GAME_DIRECTORY += i + "\\"
-print(GAME_DIRECTORY)
 # Получение разрешения
 user32 = ctypes.windll.user32
 user32.SetProcessDPIAware()
@@ -38,5 +37,3 @@ f.write(text)
 f.close()
 # Запуск игры
 os.startfile(f"{GAME_DIRECTORY}\\game\\bin\\win64\\underlords.exe")
-
-
