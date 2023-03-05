@@ -36,4 +36,4 @@ f = open(f"{GAME_DIRECTORY}\\game\\dac\\cfg\\video.txt", "w")
 f.write(text)
 f.close()
 # Запуск игры
-os.startfile(f"{GAME_DIRECTORY}\\game\\bin\\win64\\underlords.exe")
+os.startfile(f"{STEAM_DIRECTORY}\\steam.exe")
